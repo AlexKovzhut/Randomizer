@@ -13,6 +13,7 @@
 		E0DB0AD92669685900CDFCEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0DB0AD72669685900CDFCEF /* Main.storyboard */; };
 		E0DB0ADB2669685C00CDFCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0DB0ADA2669685C00CDFCEF /* Assets.xcassets */; };
 		E0DB0ADE2669685C00CDFCEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0DB0ADC2669685C00CDFCEF /* LaunchScreen.storyboard */; };
+		E0DB0AE82669698F00CDFCEF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB0AE72669698F00CDFCEF /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E0DB0ADA2669685C00CDFCEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0DB0ADD2669685C00CDFCEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0DB0ADF2669685C00CDFCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0DB0AE72669698F00CDFCEF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E0DB0ADA2669685C00CDFCEF /* Assets.xcassets */,
 				E0DB0ADC2669685C00CDFCEF /* LaunchScreen.storyboard */,
 				E0DB0ADF2669685C00CDFCEF /* Info.plist */,
+				E0DB0AE72669698F00CDFCEF /* SettingsViewController.swift */,
 			);
 			path = Randomizer;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				E0DB0AD62669685900CDFCEF /* ViewController.swift in Sources */,
 				E0DB0AD22669685900CDFCEF /* AppDelegate.swift in Sources */,
 				E0DB0AD42669685900CDFCEF /* SceneDelegate.swift in Sources */,
+				E0DB0AE82669698F00CDFCEF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJNJ35894G;
 				INFOPLIST_FILE = Randomizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJNJ35894G;
 				INFOPLIST_FILE = Randomizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
