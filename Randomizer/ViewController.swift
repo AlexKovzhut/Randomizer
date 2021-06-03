@@ -9,33 +9,34 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var HelpButton: UIBarButtonItem!
-    @IBOutlet weak var SettingButton: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.isTranslucent = false
+        
         let leftBarButtonTextAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.red,
-            .font: UIFont(name: "AmericanTypewriter-Bold", size: 20)!
-            
+            .foregroundColor: UIColor.systemGreen,
+            .font: UIFont(name: "Futura-Bold", size: 20)!
         ]
         let leftButton = self.navigationItem.leftBarButtonItem
         leftButton?.setTitleTextAttributes(leftBarButtonTextAttributes, for: .normal)
-        leftButton?.setTitleTextAttributes(leftBarButtonTextAttributes, for: .highlighted)
-        
+        leftButton?.title = "About"
+
         let rightBarButtonTextAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.red,
-            .font: UIFont(name: "AmericanTypewriter-Bold", size: 20)!
+            .foregroundColor: UIColor.green,
+            .font: UIFont(name: "Futura-Bold", size: 20)!
         ]
         let rightButton = self.navigationItem.rightBarButtonItem
         rightButton?.setTitleTextAttributes(rightBarButtonTextAttributes, for: .normal)
         rightButton?.setTitleTextAttributes(rightBarButtonTextAttributes, for: .highlighted)
+        rightButton?.title = "Settings"
         
-        
-        
+        self.view.backgroundColor = .brown
     }
 
 
+    
+    
 }
 
