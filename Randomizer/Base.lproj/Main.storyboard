@@ -12,7 +12,6 @@
         <!--Title-->
         <scene sceneID="FEF-wF-xXJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lZ0-Pl-fPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Ues-Yp-FIb" customClass="MainVC" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="053-So-X7J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -91,6 +90,7 @@
                         <outlet property="minimumValueLabel" destination="3tI-Ey-mxA" id="4nI-GI-cSJ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZ0-Pl-fPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="455.19999999999999" y="68.7192118226601"/>
         </scene>
@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7D8-EN-3rj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7D8-EN-3rj">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7D8-EN-3rj" id="4OG-AS-4Wk">
