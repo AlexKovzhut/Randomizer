@@ -88,6 +88,7 @@
                         <outlet property="getRandomNumberButton" destination="wml-vm-lcK" id="w9x-ZK-XXr"/>
                         <outlet property="maximumValueLabel" destination="LdC-fE-QJa" id="vJq-9p-2al"/>
                         <outlet property="minimumValueLabel" destination="3tI-Ey-mxA" id="4nI-GI-cSJ"/>
+                        <outlet property="randomValuelabel" destination="7IW-rb-H4v" id="sd1-Ke-W7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZ0-Pl-fPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
