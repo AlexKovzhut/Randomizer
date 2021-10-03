@@ -99,17 +99,62 @@
         <scene sceneID="WMa-Zr-LLG">
             <objects>
                 <tableViewController id="ByM-9F-9rE" customClass="SettingsVC" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f8k-7h-EVa">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="f8k-7h-EVa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7D8-EN-3rj">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NumbersCell" id="7D8-EN-3rj">
+                                <rect key="frame" x="16" y="55.333332061767578" width="343" height="34.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7D8-EN-3rj" id="4OG-AS-4Wk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="34.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xu3-9w-u40">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="34.333333333333336"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the first number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZH-Vo-kwr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="34.333333333333336"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xu3-9w-u40" firstAttribute="leading" secondItem="4OG-AS-4Wk" secondAttribute="leading" id="0a5-eP-Ae7"/>
+                                        <constraint firstItem="xu3-9w-u40" firstAttribute="top" secondItem="4OG-AS-4Wk" secondAttribute="top" id="MFk-Bd-74k"/>
+                                        <constraint firstAttribute="bottom" secondItem="xu3-9w-u40" secondAttribute="bottom" id="Mxb-K6-rfe"/>
+                                        <constraint firstAttribute="trailing" secondItem="xu3-9w-u40" secondAttribute="trailing" id="Pj0-z4-Vrg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NumbersCell" id="Hmo-uV-qcV">
+                                <rect key="frame" x="16" y="89.666664123535156" width="343" height="34.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hmo-uV-qcV" id="vPL-Xn-Wr4">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="34.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UTe-4g-E1y">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="34.333333333333336"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the last number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1D-ZX-vmk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="34.333333333333336"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UTe-4g-E1y" firstAttribute="leading" secondItem="vPL-Xn-Wr4" secondAttribute="leading" id="0fu-Pw-9OH"/>
+                                        <constraint firstItem="UTe-4g-E1y" firstAttribute="top" secondItem="vPL-Xn-Wr4" secondAttribute="top" id="lsd-Q4-JUE"/>
+                                        <constraint firstAttribute="bottom" secondItem="UTe-4g-E1y" secondAttribute="bottom" id="r46-sU-6fv"/>
+                                        <constraint firstAttribute="trailing" secondItem="UTe-4g-E1y" secondAttribute="trailing" id="t4e-Fs-CAD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -121,15 +166,24 @@
                     <navigationItem key="navigationItem" title="Settings" id="fz1-O3-u60">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="WyJ-Gf-yDV">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancelBarButton:" destination="ByM-9F-9rE" id="GlA-Zq-gdG"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="8Ih-ca-WIq">
                             <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveBarButton:" destination="ByM-9F-9rE" id="ZJn-Jq-5Iv"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="enterNumberTextField" destination="XZH-Vo-kwr" id="oKa-o8-err"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIM-rI-2A6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2234" y="69"/>
+            <point key="canvasLocation" x="2232.8000000000002" y="68.7192118226601"/>
         </scene>
         <!--Setting-->
         <scene sceneID="Dd0-48-hBj">

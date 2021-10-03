@@ -22,7 +22,9 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        minimumValueLabel.text = String(randomNumber.minValue)
+        maximumValueLabel.text = String(randomNumber.maxValue)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,7 +32,6 @@ class MainVC: UIViewController {
         guard let settingsVC = navigationVC.topViewController as? SettingsVC else { return }
         
         settingsVC.randomNumber = randomNumber
-        settingsVC.delegate = self
     }
     
     @IBAction func getRandomNumberButtonTapped(_ sender: UIButton) {
