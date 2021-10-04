@@ -11,45 +11,33 @@ protocol SettingsVCDelegate {
    func update(randomNumber: RandomNumber)
 }
 
-class SettingsVC: UITableViewController {
+class SettingsVC: UIViewController {
+    
+    @IBOutlet weak var fromTextField: UITextField!
+    @IBOutlet weak var toTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     var randomNumber: RandomNumber!
-    var delegate: SettingsVC?
-    
-    @IBOutlet weak var enterNumberTextField: UITextField!
+    var delegate: SettingsVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func saveBarButton(_ sender: UIBarButtonItem) {
-        view.endEditing(true)
-        delegate?.update(randomNumber: randomNumber)
-        dismiss(animated: true)
+
+        fromTextField.text = String(randomNumber.minValue)
+        toTextField.text = String(randomNumber.maxValue)
+        
+        fromTextField.delegate = self
+        toTextField.delegate = self
     }
     
     @IBAction func cancelBarButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NumbersCell", for: indexPath)
-        
-//        var content = cell.defaultContentConfiguration()
-//
-//        enterNumberTextField.text = content.text
-//
-//        cell.contentConfiguration = content
-
-        return cell
+    @IBAction func savePressButton(_ sender: UIButton) {
+        view.endEditing(true)
+        delegate?.update(randomNumber: randomNumber)
+        dismiss(animated: true)
     }
 }
 
@@ -57,7 +45,8 @@ extension SettingsVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         randomNumber = RandomNumber(
-            minimumValue: min
+            minValue: Int(fromTextField.text ?? "0") ?? 0,
+            maxValue: Int(toTextField.text ?? "100") ?? 10
         )
     }
 }

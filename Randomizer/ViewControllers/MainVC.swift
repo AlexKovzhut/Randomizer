@@ -13,7 +13,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var randomValuelabel: UILabel!
     @IBOutlet weak var getRandomNumberButton: UIButton!
     
-    private var randomNumber = RandomNumber(minValue: 0, maxValue: 100) {
+    private var randomNumber = RandomNumber(minValue: 0, maxValue: 10) {
         didSet {
             minimumValueLabel.text = String(randomNumber.minValue)
             maximumValueLabel.text = String(randomNumber.maxValue)
@@ -32,6 +32,7 @@ class MainVC: UIViewController {
         guard let settingsVC = navigationVC.topViewController as? SettingsVC else { return }
         
         settingsVC.randomNumber = randomNumber
+        settingsVC.delegate = self
     }
     
     @IBAction func getRandomNumberButtonTapped(_ sender: UIButton) {
